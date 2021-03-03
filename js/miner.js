@@ -3,14 +3,17 @@ $(function(){
   $('#threads').val(cores);
 
   var setparams = function(){
-    var host = location.search.match(/h=(.*?)(&|$)/);
-    var port = location.search.match(/p=(.*?)(&|$)/);
-    var user = location.search.match(/u=(.*?)(&|$)/);
-    var pass = location.search.match(/P=(.*?)(&|$)/);
-    if (host) { $('#host').val(host[1]); }
-    if (port) { $('#port').val(port[1]); }
-    if (user) { $('#username').val(user[1]); }
-    if (pass) { $('#password').val(pass[1]); }
+    var host =  location.search.match(/h=(.*?)(&|$)/);
+    var port =  location.search.match(/p=(.*?)(&|$)/);
+    var user =  location.search.match(/u=(.*?)(&|$)/);
+    var pass =  location.search.match(/P=(.*?)(&|$)/);
+    var proxy = location.search.match(/x=(.*?)(&|$)/);
+    if (host)  { $('#host').val(host[1]);     }
+    if (port)  { $('#port').val(port[1]);     }
+    if (user)  { $('#username').val(user[1]); }
+    if (pass)  { $('#password').val(pass[1]); }
+    if (proxy) { $('#proxy').val(proxy[1]);   }
+    
   };
   setparams();
 
